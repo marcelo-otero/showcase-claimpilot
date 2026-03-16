@@ -61,7 +61,7 @@ function MetricCard({
       >
         {value}
       </p>
-      <p className="text-xs font-medium text-[#5a6578] mt-1 uppercase tracking-wide">
+      <p className="text-sm font-medium text-[#5a6578] mt-1 uppercase tracking-wide">
         {label}
       </p>
     </div>
@@ -102,7 +102,7 @@ function ToolCard({
         {outputs.map((output) => (
           <li
             key={output}
-            className="text-xs text-[#5a6578] flex items-start gap-1.5"
+            className="text-sm text-[#5a6578] flex items-start gap-1.5"
           >
             <span className="mt-1 w-1 h-1 rounded-full bg-[#5a6578] shrink-0" />
             {output}
@@ -127,8 +127,8 @@ function DecisionCard({
       <h3 className="font-semibold text-[#0e1941] mb-2">{title}</h3>
       <p className="text-sm text-[#5a6578] mb-3">{rationale}</p>
       <div className="bg-[#d9eeff]/40 rounded-lg px-4 py-3 border border-[#45bce5]/20">
-        <p className="text-xs font-medium text-[#0e1941] mb-1">Tradeoff</p>
-        <p className="text-xs text-[#5a6578]">{tradeoff}</p>
+        <p className="text-sm font-medium text-[#0e1941] mb-1">Tradeoff</p>
+        <p className="text-sm text-[#5a6578]">{tradeoff}</p>
       </div>
     </div>
   );
@@ -145,11 +145,11 @@ function JdCard({
 }) {
   return (
     <div className="bg-white rounded-xl border border-[#d6dce6] shadow-[0_2px_8px_rgba(14,25,65,0.06)] p-5">
-      <p className="text-xs font-medium tracking-widest uppercase text-[#0033a0] mb-2">
+      <p className="text-sm font-medium tracking-widest uppercase text-[#0033a0] mb-2">
         {requirement}
       </p>
-      <p className="text-sm font-medium text-[#0e1941] mb-2">{feature}</p>
-      <p className="text-xs text-[#5a6578] leading-relaxed">{fit}</p>
+      <p className="text-base font-medium text-[#0e1941] mb-2">{feature}</p>
+      <p className="text-sm text-[#5a6578] leading-relaxed">{fit}</p>
     </div>
   );
 }
@@ -206,7 +206,7 @@ export default function HomePage() {
           title="Claims Triage Is a Bottleneck"
         />
         <div className="bg-white rounded-xl border border-[#d6dce6] shadow-[0_2px_8px_rgba(14,25,65,0.06)] p-6 mb-6">
-          <p className="text-sm text-[#5a6578] leading-relaxed max-w-3xl mx-auto text-center">
+          <p className="text-base text-[#5a6578] leading-relaxed max-w-3xl mx-auto text-center">
             When a customer files a First Notice of Loss, the claim has to be
             classified, the policy verified, fraud indicators checked, and the
             claim routed to the right adjuster. That process typically takes
@@ -296,7 +296,7 @@ export default function HomePage() {
             className="w-full h-auto"
             priority
           />
-          <p className="text-xs text-[#5a6578] text-center mt-4">
+          <p className="text-sm text-[#5a6578] text-center mt-4">
             Built with Next.js 16, TypeScript, Vercel AI SDK, Claude API,
             SQLite, and PostHog.{" "}
             <a
@@ -381,7 +381,7 @@ export default function HomePage() {
             tradeoff="Less accurate classification than an LLM could do. Worth it for consistent, testable results in a demo."
           />
         </div>
-        <p className="text-xs text-[#5a6578] text-center mt-4">
+        <p className="text-sm text-[#5a6578] text-center mt-4">
           Full decision log with 8 entries available on{" "}
           <a
             href="https://github.com/marcelo-otero/showcase-allstate"
@@ -419,7 +419,7 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold text-[#0e1941] mb-2">
             Try it yourself
           </h2>
-          <p className="text-sm text-[#5a6578] mb-6">
+          <p className="text-base text-[#5a6578] mb-6">
             Load a sample claim, hit submit, and watch the agent work through
             it step by step.
           </p>
@@ -437,7 +437,7 @@ export default function HomePage() {
               View the Dashboard
             </Link>
           </div>
-          <p className="text-xs text-[#5a6578]">
+          <p className="text-sm text-[#5a6578]">
             Built with Next.js 16, TypeScript, Claude API, Tailwind CSS,
             shadcn/ui, SQLite, and PostHog.
           </p>
@@ -448,7 +448,7 @@ export default function HomePage() {
       <section className="mb-8">
         <SectionHeader label="Built By" title="Marcelo Otero" />
         <div className="bg-white rounded-xl border border-[#d6dce6] shadow-[0_2px_8px_rgba(14,25,65,0.06)] p-6 max-w-2xl mx-auto text-center">
-          <p className="text-sm text-[#5a6578] leading-relaxed mb-4">
+          <p className="text-base text-[#5a6578] leading-relaxed mb-4">
             I&apos;m a product manager who builds. At Marriott, I built an AI
             agent that turned Figma mockups and requirements into structured
             Jira stories. At Now Optics, I shipped an order status tool that
