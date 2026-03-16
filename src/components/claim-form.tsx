@@ -78,7 +78,7 @@ export function ClaimForm({ onSubmit, isProcessing }: ClaimFormProps) {
             Quick start: load a sample claim
           </Label>
           <Select onValueChange={loadSampleClaim}>
-            <SelectTrigger className="w-full bg-white">
+            <SelectTrigger className="w-full bg-white" aria-label="Load sample claim">
               <SelectValue placeholder="Select a sample claim..." />
             </SelectTrigger>
             <SelectContent>

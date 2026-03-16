@@ -79,28 +79,28 @@ export default function DashboardPage() {
   const recentClaims = getRecentClaims(20);
 
   const severityColors: Record<string, string> = {
-    low: "bg-green-500",
-    medium: "bg-amber-500",
+    low: "bg-green-700",
+    medium: "bg-amber-600",
     high: "bg-orange-500",
     critical: "bg-red-500",
   };
 
   const resolutionColors: Record<string, string> = {
-    approve: "bg-green-500",
-    investigate: "bg-amber-500",
+    approve: "bg-green-700",
+    investigate: "bg-amber-600",
     escalate: "bg-red-500",
     deny: "bg-gray-500",
   };
 
   const fraudColors: Record<string, string> = {
-    low: "bg-green-500",
-    medium: "bg-amber-500",
+    low: "bg-green-700",
+    medium: "bg-amber-600",
     high: "bg-red-500",
   };
 
   const claimTypeColors: Record<string, string> = {
     auto: "bg-blue-500",
-    home: "bg-teal-500",
+    home: "bg-teal-700",
     liability: "bg-indigo-500",
   };
 
