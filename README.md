@@ -21,7 +21,7 @@ The agent streams its reasoning and tool calls to the UI in real-time. You can w
 
 ## Architecture
 
-![ClaimPilot architecture diagram](public/diagrams/architecture.png)
+![ClaimPilot architecture diagram](public/diagrams/architecture.webp)
 
 The intake form sends the claim to a Claude agent via Vercel AI SDK's `streamText`. The agent calls its tools, streams the results back to the UI as collapsible cards, stores everything in SQLite, and fires PostHog events. The dashboard is a server component that queries SQLite directly.
 

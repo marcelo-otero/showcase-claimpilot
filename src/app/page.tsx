@@ -289,7 +289,7 @@ export default function HomePage() {
         <div className="bg-white rounded-xl border border-[#d6dce6] shadow-[0_2px_8px_rgba(14,25,65,0.06)] p-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/diagrams/architecture.png"
+            src="/diagrams/architecture.webp"
             alt="ClaimPilot system architecture showing the flow from intake form through the Claude agent with 4 specialized tools to the SQLite database and PostHog analytics"
             className="w-full h-auto"
           />
@@ -297,7 +297,7 @@ export default function HomePage() {
             Built with Next.js 16, TypeScript, Vercel AI SDK, Claude API,
             SQLite, and PostHog.{" "}
             <a
-              href="/diagrams/agent-workflow.png"
+              href="/diagrams/agent-workflow.webp"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#0033a0] hover:underline"
