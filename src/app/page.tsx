@@ -313,7 +313,7 @@ export default function HomePage() {
         <SectionHeader
           label="Role Alignment"
           title="Why I Built This for Allstate"
-          subtitle="Each piece of ClaimPilot maps to something in the Digital Product Manager JD. That was intentional."
+          subtitle="Each piece of ClaimPilot maps directly to a responsibility in the Digital Product Manager JD."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <JdCard
@@ -406,7 +406,7 @@ export default function HomePage() {
           />
           <MetricCard value="13%" label="Fraud flag rate" />
           <MetricCard value="6%" label="Auto-resolution rate" />
-          <MetricCard value="8" label="Tradeoffs documented" />
+          <MetricCard value="18" label="Unit tests passing" />
         </div>
       </section>
 
@@ -450,8 +450,8 @@ export default function HomePage() {
             agent that turned Figma mockups and requirements into structured
             Jira stories. At Now Optics, I shipped an order status tool that
             handled 675K+ lookups and cut call center inquiries by 60%.
-            I&apos;ve shipped 8 personal projects with Claude Code and modern
-            AI tools. ClaimPilot is my most ambitious one yet.
+            ClaimPilot is one of several products I&apos;ve independently
+            shipped using Claude Code, Next.js, and AI APIs.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
