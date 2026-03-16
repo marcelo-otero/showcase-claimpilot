@@ -1,8 +1,19 @@
 import { test, expect } from "@playwright/test";
 
 test.describe("ClaimPilot Happy Path", () => {
-  test("home page loads with intake form", async ({ page }) => {
+  test("home page loads with project overview", async ({ page }) => {
     await page.goto("/");
+
+    await expect(page.locator("text=ClaimPilot").first()).toBeVisible();
+    await expect(page.locator("text=Try the Demo")).toBeVisible();
+    await expect(page.locator("text=View Dashboard")).toBeVisible();
+    await expect(
+      page.locator("text=Claims Triage Is a Bottleneck")
+    ).toBeVisible();
+  });
+
+  test("demo page loads with intake form", async ({ page }) => {
+    await page.goto("/demo");
 
     await expect(page.locator("text=Claims Triage")).toBeVisible();
     await expect(
@@ -16,7 +27,7 @@ test.describe("ClaimPilot Happy Path", () => {
   });
 
   test("sample claim loader populates the form", async ({ page }) => {
-    await page.goto("/");
+    await page.goto("/demo");
 
     // Open the sample claim dropdown and select CLM-001
     await page.locator("text=Select a sample claim").click();
@@ -52,22 +63,25 @@ test.describe("ClaimPilot Happy Path", () => {
   test("navigation between pages works", async ({ page }) => {
     await page.goto("/");
 
+    // Navigate to demo
+    await page.locator("nav >> text=Try Demo").click();
+    await expect(page).toHaveURL("/demo");
+    await expect(page.locator("text=Claims Triage")).toBeVisible();
+
     // Navigate to dashboard
     await page.locator("nav >> text=Dashboard").click();
     await expect(page).toHaveURL("/dashboard");
     await expect(page.locator("text=Analytics Dashboard")).toBeVisible();
-
-    // Navigate back to intake
-    await page.locator("nav >> text=Submit Claim").click();
-    await expect(page).toHaveURL("/");
-    await expect(page.locator("text=Claims Triage")).toBeVisible();
   });
 
   test("header and footer are present on all pages", async ({ page }) => {
     await page.goto("/");
     await expect(page.locator("text=ClaimPilot").first()).toBeVisible();
     await expect(page.locator("text=Built by Marcelo Otero")).toBeVisible();
-    await expect(page.locator("text=Powered by Claude API")).toBeVisible();
+
+    await page.goto("/demo");
+    await expect(page.locator("text=ClaimPilot").first()).toBeVisible();
+    await expect(page.locator("text=Built by Marcelo Otero")).toBeVisible();
 
     await page.goto("/dashboard");
     await expect(page.locator("text=ClaimPilot").first()).toBeVisible();

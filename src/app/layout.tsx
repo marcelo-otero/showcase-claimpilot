@@ -66,22 +66,16 @@ export default function RootLayout({
             </Link>
             <nav className="hidden md:flex items-center gap-1">
               <Link
-                href="/"
+                href="/demo"
                 className="px-3 py-1.5 text-sm text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all"
               >
-                Submit Claim
+                Try Demo
               </Link>
               <Link
                 href="/dashboard"
                 className="px-3 py-1.5 text-sm text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all"
               >
                 Dashboard
-              </Link>
-              <Link
-                href="/about"
-                className="px-3 py-1.5 text-sm text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all"
-              >
-                About
               </Link>
             </nav>
             <MobileNav />

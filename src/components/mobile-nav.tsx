@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "/", label: "Submit Claim" },
+  { href: "/", label: "Home" },
+  { href: "/demo", label: "Try Demo" },
   { href: "/dashboard", label: "Dashboard" },
-  { href: "/about", label: "About" },
 ];
 
 export function MobileNav() {
