@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { MobileNav } from "@/components/mobile-nav";
 import { PostHogProvider } from "@/components/posthog-provider";
 import "./globals.css";
 
@@ -59,11 +60,11 @@ export default function RootLayout({
               <span className="font-semibold text-base tracking-tight text-white">
                 ClaimPilot
               </span>
-              <span className="text-[9px] font-medium tracking-wide uppercase text-[#45bce5] border border-[#45bce5]/30 rounded px-1.5 py-0.5 leading-none bg-[#45bce5]/10">
+              <span className="hidden sm:inline text-[9px] font-medium tracking-wide uppercase text-[#45bce5] border border-[#45bce5]/30 rounded px-1.5 py-0.5 leading-none bg-[#45bce5]/10">
                 Independent Showcase Project
               </span>
             </Link>
-            <nav className="flex items-center gap-1">
+            <nav className="hidden md:flex items-center gap-1">
               <Link
                 href="/"
                 className="px-3 py-1.5 text-sm text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all"
@@ -83,6 +84,7 @@ export default function RootLayout({
                 About
               </Link>
             </nav>
+            <MobileNav />
           </div>
         </header>
 
