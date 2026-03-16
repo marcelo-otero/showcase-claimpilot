@@ -45,7 +45,7 @@ ${claim.description}`;
         <h1 className="text-3xl font-bold tracking-tight text-center text-[#0e1941]">
           Claims Triage
         </h1>
-        <p className="text-[#5a6578] mt-2 text-center max-w-xl mx-auto text-[15px]">
+        <p className="text-[#5a6578] mt-2 text-center max-w-xl mx-auto text-base">
           Submit a claim and watch the AI agent classify, verify coverage,
           screen for fraud, and recommend a resolution path.
         </p>

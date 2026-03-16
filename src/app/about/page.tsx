@@ -36,7 +36,7 @@ function SectionHeader({
         {title}
       </h2>
       {subtitle && (
-        <p className="text-[#5a6578] mt-2 text-center max-w-2xl mx-auto text-[15px]">
+        <p className="text-[#5a6578] mt-2 text-center max-w-2xl mx-auto text-base">
           {subtitle}
         </p>
       )}
@@ -170,7 +170,7 @@ export default function AboutPage() {
         <h1 className="text-3xl font-bold tracking-tight text-center text-[#0e1941]">
           About ClaimPilot
         </h1>
-        <p className="text-[#5a6578] mt-3 text-center max-w-2xl mx-auto text-[15px] leading-relaxed">
+        <p className="text-[#5a6578] mt-3 text-center max-w-2xl mx-auto text-base leading-relaxed">
           I built ClaimPilot to show what AI-powered claims triage could look
           like at{" "}
           <span className="font-medium text-[#0e1941]">Allstate</span>. It&apos;s
@@ -413,7 +413,7 @@ export default function AboutPage() {
       {/* ====== 8. CTA BANNER ====== */}
       <section className="mb-16">
         <div className="bg-[#d9eeff] rounded-xl border border-[#45bce5]/20 p-8 text-center">
-          <h2 className="text-xl font-bold text-[#0e1941] mb-2">
+          <h2 className="text-2xl font-bold text-[#0e1941] mb-2">
             Try it yourself
           </h2>
           <p className="text-sm text-[#5a6578] mb-6">

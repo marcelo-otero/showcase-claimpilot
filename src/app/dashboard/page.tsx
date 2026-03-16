@@ -44,7 +44,7 @@ function BarChart({
           </span>
           <div className="flex-1 h-7 bg-[#eef2f7] rounded-full overflow-hidden">
             <div
-              className={`h-full rounded-full flex items-center px-2.5 text-[11px] font-semibold text-white transition-all duration-500 ${
+              className={`h-full rounded-full flex items-center px-2.5 text-xs font-semibold text-white transition-all duration-500 ${
                 colorMap?.[item.label] ?? "bg-[#0033a0]"
               }`}
               style={{ width: `${Math.max((item.count / max) * 100, 12)}%` }}
@@ -67,7 +67,7 @@ function SeverityBadge({ severity }: { severity: string }) {
   };
   return (
     <span
-      className={`px-2 py-0.5 rounded-full text-[11px] font-medium ring-1 ring-inset ${styles[severity] ?? "bg-gray-100 ring-gray-600/20"}`}
+      className={`px-2 py-0.5 rounded-full text-xs font-medium ring-1 ring-inset ${styles[severity] ?? "bg-gray-100 ring-gray-600/20"}`}
     >
       {severity}
     </span>
@@ -117,7 +117,7 @@ export default function DashboardPage() {
         <h1 className="text-3xl font-bold tracking-tight text-center text-[#0e1941]">
           Analytics Dashboard
         </h1>
-        <p className="text-[#5a6578] mt-2 text-center text-[15px]">
+        <p className="text-[#5a6578] mt-2 text-center text-base">
           Triage performance across {stats.totalClaims} processed claims.
         </p>
       </div>
@@ -153,7 +153,7 @@ export default function DashboardPage() {
       {/* Charts */}
       <div className="grid md:grid-cols-2 gap-5 mb-8">
         <div className="bg-white rounded-xl border border-[#d6dce6] shadow-[0_2px_8px_rgba(14,25,65,0.06)] p-5">
-          <h3 className="text-sm font-semibold mb-4 text-[#0e1941]">Claims by Type</h3>
+          <h3 className="text-base font-semibold mb-4 text-[#0e1941]">Claims by Type</h3>
           <BarChart
             data={stats.claimsByType.map((c) => ({
               label: c.type,
@@ -164,7 +164,7 @@ export default function DashboardPage() {
         </div>
 
         <div className="bg-white rounded-xl border border-[#d6dce6] shadow-[0_2px_8px_rgba(14,25,65,0.06)] p-5">
-          <h3 className="text-sm font-semibold mb-4 text-[#0e1941]">
+          <h3 className="text-base font-semibold mb-4 text-[#0e1941]">
             Severity Distribution
           </h3>
           <BarChart
@@ -177,7 +177,7 @@ export default function DashboardPage() {
         </div>
 
         <div className="bg-white rounded-xl border border-[#d6dce6] shadow-[0_2px_8px_rgba(14,25,65,0.06)] p-5">
-          <h3 className="text-sm font-semibold mb-4 text-[#0e1941]">Resolution Outcomes</h3>
+          <h3 className="text-base font-semibold mb-4 text-[#0e1941]">Resolution Outcomes</h3>
           <BarChart
             data={stats.resolutionBreakdown.map((r) => ({
               label: r.path,
@@ -188,7 +188,7 @@ export default function DashboardPage() {
         </div>
 
         <div className="bg-white rounded-xl border border-[#d6dce6] shadow-[0_2px_8px_rgba(14,25,65,0.06)] p-5">
-          <h3 className="text-sm font-semibold mb-4 text-[#0e1941]">
+          <h3 className="text-base font-semibold mb-4 text-[#0e1941]">
             Fraud Risk Distribution
           </h3>
           <BarChart
@@ -204,7 +204,7 @@ export default function DashboardPage() {
       {/* Recent Claims Table */}
       <div className="bg-white rounded-xl border border-[#d6dce6] shadow-[0_2px_8px_rgba(14,25,65,0.06)] overflow-hidden">
         <div className="px-5 py-4 border-b border-[#d6dce6]">
-          <h3 className="text-sm font-semibold text-[#0e1941]">Recent Claims</h3>
+          <h3 className="text-base font-semibold text-[#0e1941]">Recent Claims</h3>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
@@ -245,7 +245,7 @@ export default function DashboardPage() {
                     {claim.claimant_name}
                   </td>
                   <td className="px-5 py-2.5">
-                    <Badge variant="outline" className="capitalize text-[11px]">
+                    <Badge variant="outline" className="capitalize text-xs">
                       {claim.claim_type}
                     </Badge>
                   </td>
