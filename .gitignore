@@ -36,6 +36,11 @@ yarn-error.log*
 
 # SQLite database
 data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Playwright
+/test-results/
 
 # vercel
 .vercel
