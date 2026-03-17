@@ -51,3 +51,7 @@ next-env.d.ts
 
 # private docs
 /private/
+
+# project-specific instructions (not for public viewing)
+CLAUDE.md
+guide.md
