@@ -383,7 +383,7 @@ export default function HomePage() {
         <p className="text-sm text-[#5a6578] text-center mt-4">
           Full decision log with 8 entries available on{" "}
           <a
-            href="https://github.com/marcelo-otero/showcase-allstate"
+            href="https://github.com/marcelo-otero/showcase-claimpilot"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#0033a0] underline hover:no-underline"
