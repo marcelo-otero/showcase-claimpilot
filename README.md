@@ -6,7 +6,7 @@ AI-powered insurance claims triage that classifies, verifies coverage, screens f
 
 When a customer files a First Notice of Loss, the claim has to be classified, the policy verified, fraud indicators checked, and the claim routed to the right adjuster. That process typically takes 24 to 48 hours, and misrouted claims add 5 to 10 more days on top of that.
 
-Allstate processes around 8.4 million claims a year. Loss adjustment expense runs 10 to 12% of incurred losses for top carriers. Even small improvements at the triage stage save real money.
+Large P&C carriers process millions of claims a year, and loss adjustment expense runs 10 to 12% of incurred losses. Even small improvements at the triage stage save real money.
 
 ## The Approach
 
@@ -60,11 +60,11 @@ Full [decision log](docs/decision-log.md) with 8 tradeoff entries.
 
 ## What I'd Do Next
 
-If this were a real product at Allstate:
+If this were a real product inside a carrier:
 
-- **Real data integration** - Connect `lookupPolicy` to Guidewire/Duck Creek instead of sample data
+- **Real data integration** - Connect `lookupPolicy` to a policy admin system (e.g. Guidewire, Duck Creek) instead of sample data
 - **ML-based tools** - Replace rule-based classification with models trained on historical claims
-- **Document upload** - Photo/video damage assessment (building on QuickFoto Claim)
+- **Document upload** - Photo/video damage assessment
 - **Authentication** - Role-based access for adjusters, supervisors, and SIU
 - **Feedback loop** - Adjuster corrections improve model accuracy over time
 - **A/B testing** - Test different resolution thresholds and escalation criteria
@@ -85,4 +85,4 @@ pnpm dev                    # Start dev server
 
 ## About
 
-Built by [Marcelo Otero](https://www.linkedin.com/in/marcelo-otero/). I'm a product manager who builds. I made ClaimPilot to show what AI-powered claims triage could look like at Allstate, and to demonstrate that I can take a product from idea through shipped prototype.
+Built by [Marcelo Otero](https://www.linkedin.com/in/marcelo-otero/). I'm a product manager who builds. I made ClaimPilot to show how agentic AI can be applied to a real product problem end to end, and to demonstrate that I can take a product from idea through shipped, instrumented prototype.

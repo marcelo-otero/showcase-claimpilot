@@ -38,12 +38,6 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  /* Allstate-derived color tokens */
-  --color-allstate-navy: #0e1941;
-  --color-allstate-blue: #0033a0;
-  --color-allstate-coral: #ed7766;
-  --color-allstate-cyan: #45bce5;
-  --color-allstate-light-blue: #d9eeff;
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -54,7 +48,6 @@
 }
 
 :root {
-  /* Allstate-derived palette */
   --background: #f8f9fb;
   --foreground: #0e1941;
   --card: #ffffff;
@@ -73,7 +66,6 @@
   --border: #d6dce6;
   --input: #d6dce6;
   --ring: #0033a0;
-  /* Chart colors from Allstate palette */
   --chart-1: #0033a0;
   --chart-2: #45bce5;
   --chart-3: #0e1941;

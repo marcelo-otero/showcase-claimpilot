@@ -24,12 +24,12 @@ export const metadata: Metadata = {
   ),
   title: "ClaimPilot | AI Claims Triage Assistant",
   description:
-    "Agentic insurance claims triage powered by Claude. Classifies, verifies, screens, and recommends resolution paths in seconds.",
+    "A showcase project: agentic insurance claims triage powered by Claude. Classifies, verifies, screens, and recommends resolution paths in seconds.",
   authors: [{ name: "Marcelo Otero" }],
   openGraph: {
     title: "ClaimPilot",
     description:
-      "AI-powered insurance claims triage that classifies, verifies coverage, screens for fraud, and recommends resolution paths.",
+      "A showcase project: agentic insurance claims triage powered by Claude. Classifies, verifies coverage, screens for fraud, and recommends resolution paths.",
     type: "website",
   },
 };
@@ -82,7 +82,7 @@ export default function RootLayout({
               <span>Built by <a href="https://www.linkedin.com/in/marcelo-otero/" target="_blank" rel="noopener noreferrer" className="underline hover:text-white/90 transition-colors">Marcelo Otero</a></span>
             </div>
             <p className="text-white/60 text-xs">
-              Independent portfolio project. Not affiliated with or endorsed by Allstate.
+              Independent portfolio project. Not affiliated with any insurance carrier. Built with synthetic sample data only.
             </p>
           </div>
         </footer>

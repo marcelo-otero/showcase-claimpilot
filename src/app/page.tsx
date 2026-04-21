@@ -5,11 +5,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "ClaimPilot | AI Claims Triage Assistant",
   description:
-    "AI-powered insurance claims triage that classifies, verifies coverage, screens for fraud, and recommends resolution paths in under 60 seconds. Built by Marcelo Otero.",
+    "A showcase project: an agentic AI system that triages insurance claims by classifying, verifying coverage, screening for fraud, and recommending resolution paths. Built by Marcelo Otero.",
   openGraph: {
     title: "ClaimPilot",
     description:
-      "AI-powered insurance claims triage that classifies, verifies coverage, screens for fraud, and recommends resolution paths.",
+      "A showcase project: an agentic AI system that triages insurance claims by classifying, verifying coverage, screening for fraud, and recommending resolution paths.",
   },
 };
 
@@ -134,19 +134,19 @@ function DecisionCard({
   );
 }
 
-function JdCard({
-  requirement,
+function CapabilityCard({
+  capability,
   feature,
   fit,
 }: {
-  requirement: string;
+  capability: string;
   feature: string;
   fit: string;
 }) {
   return (
     <div className="bg-white rounded-xl border border-[#d6dce6] shadow-[0_2px_8px_rgba(14,25,65,0.06)] p-5">
       <p className="text-sm font-medium tracking-widest uppercase text-[#0033a0] mb-2">
-        {requirement}
+        {capability}
       </p>
       <p className="text-base font-medium text-[#0e1941] mb-2">{feature}</p>
       <p className="text-sm text-[#5a6578] leading-relaxed">{fit}</p>
@@ -172,12 +172,11 @@ export default function HomePage() {
           ClaimPilot
         </h1>
         <p className="text-[#5a6578] mt-3 text-center max-w-2xl mx-auto text-base leading-relaxed">
-          I built ClaimPilot to show what AI-powered claims triage could look
-          like at{" "}
-          <span className="font-medium text-[#0e1941]">Allstate</span>. It&apos;s
-          a working prototype where a Claude-powered agent classifies claims,
-          verifies coverage, screens for fraud, and recommends next steps. The
-          whole triage takes under 60 seconds.
+          A working prototype of AI-powered insurance claims triage. A
+          Claude-powered agent classifies claims, verifies coverage, screens
+          for fraud, and recommends next steps. The whole triage takes under
+          60 seconds. I built it to show how agentic AI and tool-use can be
+          applied to a real product problem end to end.
         </p>
         <div className="flex items-center justify-center gap-3 mt-6">
           <Link
@@ -194,8 +193,8 @@ export default function HomePage() {
           </Link>
         </div>
         <p className="text-xs text-[#5a6578] mt-5 text-center max-w-lg mx-auto">
-          This is an independent portfolio project, not affiliated with or
-          endorsed by Allstate. Built with sample data only.
+          Independent portfolio project. Not affiliated with any insurance
+          carrier. Built with synthetic sample data only.
         </p>
       </div>
 
@@ -211,13 +210,13 @@ export default function HomePage() {
             classified, the policy verified, fraud indicators checked, and the
             claim routed to the right adjuster. That process typically takes
             24 to 48 hours, and misrouted claims add 5 to 10 days on top of
-            that. Allstate processes around 8.4 million claims a year, so even
-            small improvements at this stage save real money.
+            that. Large P&amp;C carriers process millions of claims a year, so
+            even small improvements at this stage save real money.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <MetricCard value="24-48 hrs" label="Current triage time" />
-          <MetricCard value="~8.4M / year" label="Allstate claim volume" />
+          <MetricCard value="5-10 days" label="Misroute delay" />
           <MetricCard value="10-12%" label="Loss adjustment expense" />
         </div>
       </section>
@@ -311,41 +310,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ====== 5. JD MAPPING ====== */}
+      {/* ====== 5. WHAT THIS DEMONSTRATES ====== */}
       <section className="mb-16">
         <SectionHeader
-          label="Role Alignment"
-          title="Why I Built This for Allstate"
-          subtitle="Each piece of ClaimPilot maps directly to a responsibility in the Digital Product Manager JD."
+          label="What This Demonstrates"
+          title="Skills in Practice"
+          subtitle="I built ClaimPilot to show how I take a product from problem framing to a shipped, instrumented prototype."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <JdCard
-            requirement="Product Direction"
+          <CapabilityCard
+            capability="Product Direction"
             feature="Product brief with scoped v1 roadmap, success metrics, and explicit non-goals."
             fit="I scoped this the way I'd scope a real product: what's in, what's out, and why. Not just a list of features."
           />
-          <JdCard
-            requirement="Stakeholder & Demand Management"
+          <CapabilityCard
+            capability="Decisions Under Tradeoffs"
             feature="Decision log with 8 documented tradeoffs, each with context, options, and rationale."
-            fit="Every entry is a tradeoff I actually had to make. These are the kinds of conversations I'd have with stakeholders at Allstate."
+            fit="Every entry is a tradeoff I actually had to make. These are the kinds of conversations I want to have with stakeholders."
           />
-          <JdCard
-            requirement="Problem Framing"
-            feature="Problem statement grounded in industry data: 24-48 hour triage, 5-10 day misroute delays, ~8.4M claims/year."
+          <CapabilityCard
+            capability="Problem Framing"
+            feature="Problem statement grounded in industry data: 24-48 hour triage, 5-10 day misroute delays, 10-12% loss adjustment expense."
             fit="I started with the numbers, not a vague idea. The problem statement connects directly to measurable outcomes."
           />
-          <JdCard
-            requirement="Data-Driven Decisions"
+          <CapabilityCard
+            capability="Data-Driven Decisions"
             feature="Analytics dashboard with live metrics plus PostHog tracking with a documented analytics plan."
             fit="I can walk through what the dashboard shows and explain why each event is tracked. Every metric answers a specific product question."
           />
-          <JdCard
-            requirement="User Experience"
+          <CapabilityCard
+            capability="User Experience"
             feature="Streaming agent chat that shows each tool call as a card with inputs, outputs, and reasoning."
-            fit="The UI makes the agent's thinking visible. That's a UX win for users and an auditability requirement for insurance."
+            fit="The UI makes the agent's thinking visible. That's a UX win for users and an auditability requirement for regulated domains like insurance."
           />
-          <JdCard
-            requirement="AI Innovation"
+          <CapabilityCard
+            capability="Agentic AI"
             feature="Multi-step Claude agent with 4 tools, Zod-validated I/O, and configurable escalation thresholds."
             fit="This isn't a chatbot wrapper. Claude decides which tools to call autonomously, and high fraud risk triggers human review instead of auto-resolving."
           />
@@ -367,7 +366,7 @@ export default function HomePage() {
           />
           <DecisionCard
             title='"Triage assistance" not "claims automation"'
-            rationale="No carrier will let AI auto-settle claims. Real claims involve negotiation, documentation, and regulatory compliance. I framed this as decision support because that's what an Allstate hiring manager would actually want to see, not a naive pitch about replacing adjusters."
+            rationale="No carrier will let AI auto-settle claims. Real claims involve negotiation, documentation, and regulatory compliance. I framed this as decision support because that's the credible value proposition for AI in insurance, not a naive pitch about replacing adjusters."
             tradeoff="&ldquo;Automated Claims Resolution&rdquo; sounds more impressive on a resume. But credibility matters more than ambition here."
           />
           <DecisionCard
@@ -454,7 +453,8 @@ export default function HomePage() {
             Jira stories. At Now Optics, I shipped an order status tool that
             handled 675K+ lookups and cut call center inquiries by 60%.
             ClaimPilot is one of several products I&apos;ve independently
-            shipped using Claude Code, Next.js, and AI APIs.
+            shipped using Claude Code, Next.js, and AI APIs to show how
+            agentic AI can be applied to real business problems.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
